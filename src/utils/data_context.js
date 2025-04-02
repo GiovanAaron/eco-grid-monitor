@@ -42,7 +42,7 @@ function calculateEnergyTotals(dataArray) {
     };
         // console.log(dataArray)
     dataArray.data.forEach(item => {
-            console.log(item)
+            // console.log(item)
             const category = classification[item.fuelType];
             // console.log(fuelType)
             if (category) {

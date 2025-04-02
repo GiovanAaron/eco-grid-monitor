@@ -7,6 +7,7 @@ import NotGreenResultCard from './components/not_green_result_card/NotGreenResul
 
 import LoadingCard from './components/loading_card/LoadingCard'
 import fetchEnergyData from './hook/apiCall'
+import { filterByBaselineSettlementPeriod, calculateEnergyTotals, compareEnergyTotals } from './utils/data_context'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -23,13 +24,26 @@ function App() {
     setTimeout(() => {
         fetchEnergyData().then((data) => {
             setIsLoading(false);
-            setEnergyData(data);
-            console.log(data)
+            // setEnergyData(data);
+            // console.log(data)
+            const filteredData = filterByBaselineSettlementPeriod(data);
+            console.log(filteredData)
+            // console.log({filtereddataminus1: filteredData[filteredData.length-1], filtereddata0: filteredData[0]})
+            const yesterdayEnergyTotals = calculateEnergyTotals(filteredData[0]);
+            const todayEnergyTotals = calculateEnergyTotals(filteredData[filteredData.length-1]);
+
+            console.log({yesterdayEnergyTotals: yesterdayEnergyTotals, todayEnergyTotals: todayEnergyTotals})
+            console.log(compareEnergyTotals(yesterdayEnergyTotals, todayEnergyTotals))
+            compareEnergyTotals(yesterdayEnergyTotals, todayEnergyTotals).isRising ? setEnergyStatus("not green") : setEnergyStatus("green");
+
+
         })
 
 
     }, 3000);
   }, []);
+
+  
 
 
   if (isLoading) {

@@ -4,7 +4,7 @@ import loader_icon from '../../assets/loader_icon.svg';
 import rendesco_grid_logo from '../../assets/rendesco_grid_logo.svg';
 import green_chart from '../../assets/green_chart.svg';
 
-function GreenResultCard() {
+function GreenResultCard({rate}) {
     return (
         <div className={styles.container}>
         <img className={styles.greenChartIcon}  src={green_chart}/>
@@ -12,7 +12,7 @@ function GreenResultCard() {
         <p className={styles.goodNews}>Good news!</p>
         <p className={styles.fossilFuelConsumptionIsDow}>
         <span>{`Fossil Fuel consumption is down `}</span>
-        <span className={styles.span}>15%</span>
+        <span className={styles.span}>{rate}%</span>
         <span className={styles.fromYesterdayAt}> from yesterday at this hour</span>
         </p>
         </div>

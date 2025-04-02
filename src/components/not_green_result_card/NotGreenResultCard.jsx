@@ -5,7 +5,7 @@ import rendesco_grid_logo from '../../assets/rendesco_grid_logo.svg';
 import green_chart from '../../assets/green_chart.svg';
 import not_green_chart from '../../assets/not_green_chart.svg';
 
-function NotGreenResultCard() {
+function NotGreenResultCard({rate}) {
   return (
     <div className={styles.container}>
  
@@ -14,7 +14,7 @@ function NotGreenResultCard() {
     <p className={styles.ohNo}>Oh no!</p>
     <p className={styles.fossilFuelConsumptionIsUp}>
     <span>{`Fossil Fuel consumption is up by `}</span>
-    <span className={styles.span}>15%</span>
+    <span className={styles.span}>{rate}%</span>
     <span className={styles.fromYesterdayAt}> from yesterday at this hour</span>
     </p>
     </div>

@@ -10,13 +10,13 @@ import fetchEnergyData from './hook/apiCall'
 import { filterByBaselineSettlementPeriod, calculateEnergyTotals, compareEnergyTotals } from './utils/data_context'
 
 function App() {
-  const [count, setCount] = useState(0)
+ 
 
   const [isLoading, setIsLoading] = useState(false);
 
   const [energyStatus, setEnergyStatus] = useState("green");
 
-  const [energyData, setEnergyData] = useState([]);
+  const [energyInsights, setEnergyInsights] = useState([]);
 
 
   useEffect(() => {
@@ -35,7 +35,7 @@ function App() {
             console.log({yesterdayEnergyTotals: yesterdayEnergyTotals, todayEnergyTotals: todayEnergyTotals})
             console.log(compareEnergyTotals(yesterdayEnergyTotals, todayEnergyTotals))
             compareEnergyTotals(yesterdayEnergyTotals, todayEnergyTotals).isRising ? setEnergyStatus("not green") : setEnergyStatus("green");
-
+            setEnergyInsights(compareEnergyTotals(yesterdayEnergyTotals, todayEnergyTotals));
 
         })
 
@@ -50,17 +50,17 @@ function App() {
     return <LoadingCard />;
   }
 
-  if (energyStatus === "green") {
+  if (energyStatus === "not green") {
     return (
       <>
-      <GreenResultCard/>
+      <GreenResultCard rate={Math.round(energyInsights.greenPercentage * 100) / 100}/>
       </>
     )
   }
 
   return (
     <>
-    <NotGreenResultCard/>
+    <NotGreenResultCard rate={Math.round(energyInsights.notGreenPercentage * 100) / 100}/>
     </>
   )
 }

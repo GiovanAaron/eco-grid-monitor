@@ -57,9 +57,9 @@ function NotGreenResultCard({handleFetchData, setEnergyStatus}) {
     <button onClick={fetchData} className={styles.greenbtn}>
     <div className={styles.checkAgain}>Check Again</div>
     </button>
-    <div className={styles.overlay} />
     <img className={styles.rendescoGridLogoIcon} alt="" src={rendesco_grid_logo} />
     <div className={styles.advisory}>We advise that you reduce your energy consumption</div>
+    <div className={styles.overlay} />
     </div>)
 }
 

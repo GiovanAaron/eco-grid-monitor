@@ -28,7 +28,7 @@ function GreenResultCard({ handleFetchData, setEnergyStatus }) {
     };
 
     useEffect(() => {
-        fetchData(); // Fetch data on component mount
+        fetchData(); 
     }, []);
 
     if (isLoading) {
@@ -50,8 +50,8 @@ function GreenResultCard({ handleFetchData, setEnergyStatus }) {
             <button className={styles.greenbtn}>
                 <div className={styles.checkAgain} onClick={fetchData}>Check Again</div>
             </button>
-            <div className={styles.overlay} />
             <img className={styles.rendescoGridLogoIcon} src={rendesco_grid_logo} />
+            <div className={styles.overlay} />
         </div>
     );
 }

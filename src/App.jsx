@@ -7,11 +7,10 @@ import { filterByBaselineSettlementPeriod, calculateEnergyTotals, compareEnergyT
 
 function App() {
     const [energyStatus, setEnergyStatus] = useState("green");
-    // const [energyInsights, setEnergyInsights] = useState([]);
 
-    // Function to fetch data and update energy status
+    // function to fetch data and update energy status
     const handleFetchData = async () => {
-      return fetchEnergyData().then((data) => {  // ✅ Return the Promise
+      return fetchEnergyData().then((data) => {  
           const filteredData = filterByBaselineSettlementPeriod(data);
           const yesterdayEnergyTotals = calculateEnergyTotals(filteredData[0]);
           const todayEnergyTotals = calculateEnergyTotals(filteredData[filteredData.length - 1]);
@@ -29,7 +28,7 @@ function App() {
             {energyStatus === "green" ? (
                 <GreenResultCard 
                    
-                    onRefresh={handleFetchData} // Pass function to child
+                    onRefresh={handleFetchData} 
                     handleFetchData={handleFetchData} 
                     energyStatus={energyStatus}
                     setEnergyStatus={setEnergyStatus}
@@ -41,7 +40,7 @@ function App() {
                     onRefresh={handleFetchData}
                     handleFetchData={handleFetchData}
                     energyStatus={energyStatus}
-                    setEnergyStatus={setEnergyStatus} // Pass function to child
+                    setEnergyStatus={setEnergyStatus} 
                 />
             )}
         </>

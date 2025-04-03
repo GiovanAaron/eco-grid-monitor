@@ -1,9 +1,9 @@
 
 function filterByBaselineSettlementPeriod(dataArray) {
-    // Take the last object in the array to get the baseline settlementPeriod
+    // take the last object in the array to get the baseline settlementPeriod
     const baselineSettlementPeriod = dataArray[dataArray.length - 1].settlementPeriod;
 
-    // Filter out all objects that don't have the same settlementPeriod
+    // filter out all objects that don't have the same settlementPeriod
     const filteredData = dataArray.filter(entry => entry.settlementPeriod === baselineSettlementPeriod);
 
     return filteredData;

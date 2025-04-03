@@ -16,10 +16,11 @@ function App() {
           const todayEnergyTotals = calculateEnergyTotals(filteredData[filteredData.length - 1]);
           const greenPercentage = calculateGreenPercentage(todayEnergyTotals);
           const fetchedInsights = compareEnergyTotals(yesterdayEnergyTotals, todayEnergyTotals);
-          
+
+          console.log(todayEnergyTotals)
          
   
-          return {fetchedInsights, greenPercentage};
+          return {fetchedInsights, greenPercentage, todayEnergyTotals};
       });
   };
   

@@ -3,6 +3,7 @@ import styles from './GreenResultCard.module.css';
 import green_chart from '../../assets/green_chart.svg';
 import rendesco_grid_logo from '../../assets/rendesco_grid_logo.svg';
 import LoadingCard from '../loading_card/LoadingCard';
+import DataVis from '../bar_chart/DataVis';
 
 function GreenResultCard({ handleFetchData, setEnergyStatus }) {
     const [rate, setRate] = useState(null);
@@ -22,7 +23,7 @@ function GreenResultCard({ handleFetchData, setEnergyStatus }) {
             setInsights(fetchedInsights);
             setRate(Math.round(fetchedInsights.notGreenPercentage * 100) / 100);
         }
-        if (!fetchedInsights.isRising) {
+        if (fetchedInsights.isRising) {
             setIsLoading(false);
         } else setEnergyStatus("not green");
         
@@ -38,7 +39,11 @@ function GreenResultCard({ handleFetchData, setEnergyStatus }) {
 
     return (
         <div className={styles.container}>
-            <img className={styles.greenChartIcon} src={green_chart} />
+           
+            {/* <img className={styles.greenChartIcon} src={green_chart} /> */}
+            
+                <DataVis />
+            
                 <div className={styles.greenPerc}>
                     <span className={styles.dot}></span> <p>{greenPercentage}% Green Power</p>
                 </div>

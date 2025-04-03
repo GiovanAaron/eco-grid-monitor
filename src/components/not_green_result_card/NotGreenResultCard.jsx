@@ -6,6 +6,7 @@ import green_chart from '../../assets/green_chart.svg';
 import not_green_chart from '../../assets/not_green_chart.svg';
 import { useState, useEffect } from 'react';
 import LoadingCard from '../loading_card/LoadingCard';
+import BarChart from '../bar_chart/DataVis';
 function NotGreenResultCard({handleFetchData, setEnergyStatus}) {
 
   const [rate, setRate] = useState(null);
@@ -18,14 +19,14 @@ function NotGreenResultCard({handleFetchData, setEnergyStatus}) {
       setIsLoading(true);
       await new Promise(resolve => setTimeout(resolve, 3000)); // Wait for 3 seconds
       
-      const {fetchedInsights, greenPercentage} = await handleFetchData(); // ✅ Now this will return valid data
+      const {fetchedInsights, greenPercentage, todayEnergyTotals} = await handleFetchData(); // ✅ Now this will return valid data
       console.log(fetchedInsights);
       if (fetchedInsights) {
           setGreenPercentage(greenPercentage);
           setInsights(fetchedInsights);
           setRate(Math.round(fetchedInsights.notGreenPercentage * 100) / 100);
       }
-      if (fetchedInsights.isRising) {
+      if (!fetchedInsights.isRising) {
           setIsLoading(false);
       } else setEnergyStatus("green");
       
@@ -44,8 +45,8 @@ function NotGreenResultCard({handleFetchData, setEnergyStatus}) {
 
   return (
     <div className={styles.container}>
- 
-   <img className={styles.notGreenChartIcon} alt="" src={not_green_chart} />
+        
+        <BarChart/>
     <div className={styles.greenPerc}>
                        <span className={styles.dot}></span> <p>{greenPercentage}% Green Power</p>
                    </div>

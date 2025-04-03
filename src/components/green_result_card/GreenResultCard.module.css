@@ -1,3 +1,22 @@
+.rendescoGridLogoIcon {
+    position: relative;
+    top: -16rem; /* Updated from percentage to rem for consistency */
+}
+
+.greenPerc {
+    top: 25%;
+    left: 50%;
+    transform: translateX(-50%);
+    justify-self: center;
+    justify-content: center;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    min-width: 30rem;
+    align-items: center;
+    gap: 0.5rem;
+}
+
 .greenChartIcon {
     position: relative;
     top: 14.188rem;
@@ -22,13 +41,13 @@
 
 .resulttext {
     position: relative;
-    top: 35%;
+    top: 32%;
     font-weight: 500;
 }
 
 .disclaimertext {
     position: relative;
-    top: 27rem; /* Updated from percentage to rem for consistency */
+    top: 30rem; /* Updated from percentage to rem for consistency */
     font-size: 0.688rem;
 }
 
@@ -52,24 +71,8 @@
     margin: auto; /* Ensures proper centering */
 }
 
-.rendescoGridLogoIcon {
-    position: relative;
-    top: -18rem; /* Updated from percentage to rem for consistency */
-}
 
-.greenPerc {
-    top: 19%;
-    left: 50%;
-    transform: translateX(-50%);
-    justify-self: center;
-    justify-content: center;
-    position: absolute;
-    display: flex;
-    flex-direction: row;
-    min-width: 30rem;
-    align-items: center;
-    gap: 0.5rem;
-}
+
 
 .dot {
     height: 0.5rem;
@@ -128,4 +131,12 @@ button {
     overflow: hidden;
     opacity: 1;
     animation: fadeOut 1s forwards;
+}
+
+.dataVisContainer {
+    position: relative;
+    max-width: 20rem;
+    margin: 0 auto;
+    max-height: 50rem;
+    top: 15rem
 }

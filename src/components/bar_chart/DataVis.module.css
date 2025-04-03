@@ -1,0 +1,9 @@
+.dataVisContainer {
+    position: relative;
+    max-width: 20rem;
+    
+    margin: 0 auto;
+    min-height: 10rem;
+    top: 15rem
+
+}

@@ -1,3 +1,12 @@
+.rendescoGridLogoIcon {
+    position: relative;
+    /* top: -40%; */
+   /* top : -40vh */
+   top : -16rem
+    
+
+}
+
 .notGreenChartIcon {
     position: relative;
     top: 14.188rem;
@@ -6,7 +15,7 @@
 
 .advisory {
     position: relative;
-    top: 15%;
+    top: 12%;
     font-weight: 500;
 }
 .ohNo {
@@ -24,13 +33,13 @@
 }
 .resulttext {
     position: relative;
-    top: 35%;
+    top: 32%;
     font-weight: 500;
 }
 .disclaimertext {
     position: relative;
     /* top: 60vh; */
-    top: 27rem;
+    top: 30rem;
     
     
     font-size: 0.688rem;
@@ -57,7 +66,7 @@
     
 }
 .greenPerc{
-    top: 19%;
+    top: 25%;
     left: 50%;
     /* right: 50%; */
     transform: translateX(-50%);
@@ -83,14 +92,7 @@
       
 }
 
-.rendescoGridLogoIcon {
-    position: relative;
-    /* top: -40%; */
-   /* top : -40vh */
-   top : -18rem
-    
 
-}
 .container {
     width: 36.625rem;
     height: 100vh;

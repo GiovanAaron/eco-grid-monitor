@@ -1,5 +1,7 @@
 ## Eco Grid Monitor - React Vite App
 
+https://giovanaaron.github.io/eco-grid-monitor/
+
 #### Description
 The Green Grid app is a single-page React application that displays the environmental impact of the electricity grid in Great Britain. Using real-time data from the Elexon API, the app shows the amount of power generated from various fuel sources, categorizing them as "green" or "not green." The component also encourages users to reduce energy consumption when fossil fuel usage is high, promoting sustainable energy usage.
 

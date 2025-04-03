@@ -1,12 +1,43 @@
-# React + Vite
+## Eco Grid Monitor - React Vite App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+#### Description
+The Green Grid app is a single-page React application that displays the environmental impact of the electricity grid in Great Britain. Using real-time data from the Elexon API, the app shows the amount of power generated from various fuel sources, categorizing them as "green" or "not green." The component also encourages users to reduce energy consumption when fossil fuel usage is high, promoting sustainable energy usage.
 
-Currently, two official plugins are available:
+#### Features:
+Real-time power generation data from the Elexon API.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Categorization of fuel types as "green" or "not green" based on their environmental impact.
 
-## Expanding the ESLint configuration
+Encourages users to reduce energy consumption when fossil fuels are being used more than usual.
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+#### Installation and Run Guide
+Prerequisites:
+Ensure you have Node.js and npm installed on your machine.
+
+Steps:
+Clone the repository:
+
+```
+bash
+git clone https://github.com/GiovanAaron/eco-grid-monitor
+```
+Navigate to the project directory:
+
+```
+bash
+cd green-grid
+```
+Install dependencies: Use npm or yarn to install the necessary packages:
+
+```
+bash
+npm install
+```
+
+Start the development server: Run the following command to start the app:
+```
+bash
+npm run dev
+
+```
+Open the app in your browser: After the server starts, navigate to http://localhost:5174/eco-grid-monitor/ in your browser to view the app.

@@ -61,6 +61,32 @@
 
 }
 
+.greenPerc{
+    top: 19%;
+    left: 50%;
+    right: 50%;
+    justify-self: center;
+    justify-content: center;
+    position: absolute;
+    display:flex;
+    flex-direction: row;
+    min-width: 30rem;
+    align-items: center;
+    gap: 0.5rem;
+
+}
+
+.dot {
+
+    
+        height: 0.5rem;
+        width: 0.5rem;
+        background-color: #02B782;
+        border-radius: 50%;
+        
+      
+}
+
 .container {
     width: 36.625rem;
     height: 46.188rem;

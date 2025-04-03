@@ -50,9 +50,21 @@ function calculateEnergyTotals(dataArray) {
             }
         });
     ;
-    
+    // console.log({totals:totals})
     return totals;
 }
+
+function calculateGreenPercentage(data) {
+    // add total
+    
+    const total = data["Green"] + data["Neutral"] + data["Not green"];
+    
+    // calculate percentage of green
+    const percentageGreen = (data["Green"]/ total) * 100;
+    
+    return percentageGreen.toFixed(2);
+}
+
 
 function compareEnergyTotals(totals1, totals2) {
     const calculatePercentageChange = (oldValue, newValue) => {
@@ -71,4 +83,5 @@ function compareEnergyTotals(totals1, totals2) {
 
 
 
-export { filterByBaselineSettlementPeriod , calculateEnergyTotals, compareEnergyTotals};
+
+export { filterByBaselineSettlementPeriod , calculateEnergyTotals, compareEnergyTotals, calculateGreenPercentage};

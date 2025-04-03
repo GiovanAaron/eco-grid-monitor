@@ -3,7 +3,7 @@ import './App.css';
 import GreenResultCard from './components/green_result_card/GreenResultCard';
 import NotGreenResultCard from './components/not_green_result_card/NotGreenResultCard';
 import fetchEnergyData from './hook/apiCall';
-import { filterByBaselineSettlementPeriod, calculateEnergyTotals, compareEnergyTotals } from './utils/data_context';
+import { filterByBaselineSettlementPeriod, calculateEnergyTotals, compareEnergyTotals,calculateGreenPercentage } from './utils/data_context';
 
 function App() {
     const [energyStatus, setEnergyStatus] = useState("green");
@@ -14,11 +14,12 @@ function App() {
           const filteredData = filterByBaselineSettlementPeriod(data);
           const yesterdayEnergyTotals = calculateEnergyTotals(filteredData[0]);
           const todayEnergyTotals = calculateEnergyTotals(filteredData[filteredData.length - 1]);
-  
-          const insights = compareEnergyTotals(yesterdayEnergyTotals, todayEnergyTotals);
+          const greenPercentage = calculateGreenPercentage(todayEnergyTotals);
+          const fetchedInsights = compareEnergyTotals(yesterdayEnergyTotals, todayEnergyTotals);
+          
          
   
-          return insights
+          return {fetchedInsights, greenPercentage};
       });
   };
   

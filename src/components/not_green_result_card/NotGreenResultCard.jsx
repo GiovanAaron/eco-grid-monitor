@@ -11,16 +11,17 @@ function NotGreenResultCard({handleFetchData, setEnergyStatus}) {
   const [rate, setRate] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
   const [insights, setInsights] = useState(null);
+  const [greenPercentage, setGreenPercentage] = useState(null);
 
   // Fetch data on mount & when "Check Again" is clicked
   const fetchData = async () => {
       setIsLoading(true);
       await new Promise(resolve => setTimeout(resolve, 3000)); // Wait for 3 seconds
       
-      const fetchedInsights = await handleFetchData(); // ✅ Now this will return valid data
+      const {fetchedInsights, greenPercentage} = await handleFetchData(); // ✅ Now this will return valid data
       console.log(fetchedInsights);
       if (fetchedInsights) {
-
+          setGreenPercentage(greenPercentage);
           setInsights(fetchedInsights);
           setRate(Math.round(fetchedInsights.notGreenPercentage * 100) / 100);
       }
@@ -45,6 +46,9 @@ function NotGreenResultCard({handleFetchData, setEnergyStatus}) {
     <div className={styles.container}>
  
    <img className={styles.notGreenChartIcon} alt="" src={not_green_chart} />
+    <div className={styles.greenPerc}>
+                       <span className={styles.dot}></span> <p>{greenPercentage}% Green Power</p>
+                   </div>
     <div className={styles.resulttext}>
     <p className={styles.ohNo}>Oh no!</p>
     <p className={styles.fossilFuelConsumptionIsUp}>

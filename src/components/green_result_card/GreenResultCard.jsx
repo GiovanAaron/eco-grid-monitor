@@ -20,7 +20,7 @@ function GreenResultCard({ handleFetchData, setEnergyStatus }) {
         if (fetchedInsights) {
             setGreenPercentage(greenPercentage);
             setInsights(fetchedInsights);
-            setRate(Math.round(fetchedInsights.greenPercentage * 100) / 100);
+            setRate(Math.round(fetchedInsights.notGreenPercentage * 100) / 100);
         }
         if (!fetchedInsights.isRising) {
             setIsLoading(false);

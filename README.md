@@ -1,6 +1,6 @@
 ## Eco Grid Monitor - React Vite App
 
-##🚨 This web application is optomised to Chrome and Opera web browsers. There may be in consistencies for Safari
+### 🚨🚨 This web application is optomised to Chrome and Opera web browsers. There may be in consistencies for Safari
 
 https://giovanaaron.github.io/eco-grid-monitor/
 

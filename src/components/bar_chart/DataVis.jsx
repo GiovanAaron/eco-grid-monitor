@@ -51,14 +51,15 @@ const options = {
         display: false, // Hide grid lines
       },
       ticks: {
-        padding: 10, // ✅ Pushes X-axis labels away from the chart
+        padding: 10, // ✅ Pushes X-axis labels away from the chart      },
+        color: '#FFFFFF'
       },
-    },
     y: {
       display: false, // Hide Y-axis if not needed
     },
   },
-};
+}
+}
 
 
 const DataVis = ({ stats }) => (

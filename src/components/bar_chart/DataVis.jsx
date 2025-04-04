@@ -61,7 +61,10 @@ const options = {
 };
 
 
-const DataVis = () => (
+const DataVis = ({ stats }) => (
+
+  
+
   <div className={styles.dataVisContainer}>
     <Bar data={data} options={options} />
   </div>

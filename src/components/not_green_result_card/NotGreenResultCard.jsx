@@ -26,7 +26,7 @@ function NotGreenResultCard({handleFetchData, setEnergyStatus}) {
           setInsights(fetchedInsights);
           setRate(Math.round(fetchedInsights.notGreenPercentage * 100) / 100);
       }
-      if (!fetchedInsights.isRising) {
+      if (fetchedInsights.isRising) {
           setIsLoading(false);
       } else setEnergyStatus("green");
       

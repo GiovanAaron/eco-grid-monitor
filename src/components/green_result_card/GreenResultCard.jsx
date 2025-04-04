@@ -10,20 +10,39 @@ function GreenResultCard({ handleFetchData, setEnergyStatus }) {
     const [isLoading, setIsLoading] = useState(true);
     const [insights, setInsights] = useState(null);
     const [greenPercentage, setGreenPercentage] = useState(null);
+    const [chartStats, setChartStats] = useState(null);
 
     // Fetch data on mount & when "Check Again" is clicked
     const fetchData = async () => {
         setIsLoading(true);
         await new Promise(resolve => setTimeout(resolve, 3000)); // Wait for 3 seconds
         
-        const {fetchedInsights, greenPercentage} = await handleFetchData(); // ✅ Now this will return valid data
+        const {fetchedInsights, greenPercentage, todayEnergyTotals} = await handleFetchData(); // ✅ Now this will return valid data
         console.log(fetchedInsights);
+        if (todayEnergyTotals) {
+            setChartStats({
+                labels: ['Green', 'Not Green', 'Neutral'],
+                datasets: [
+                  {
+                    label: 'Energy Breakdown',
+                    data: [todayEnergyTotals.Green, todayEnergyTotals['Not green'], todayEnergyTotals['Neutral']], // Your data values for each category
+                    backgroundColor: ['#02B782', '#FF6D6D', '#D9D9D9'], // Assign colors for each bar
+                    borderColor: ['#02B782', '#FF6D6D', '#D9D9D9'],
+                    borderWidth: 1,
+                    barThickness: 40, // Set the bar thickness (width)
+                    categoryPercentage: .2, // Maximize the use of space for each category
+                    barPercentage: 0.8,  // Control the width of the bars relative to the category
+                  },
+                ],
+              });
+        }
+
         if (fetchedInsights) {
             setGreenPercentage(greenPercentage);
             setInsights(fetchedInsights);
             setRate(Math.round(fetchedInsights.notGreenPercentage * 100) / 100);
         }
-        if (fetchedInsights.isRising) {
+        if (!fetchedInsights.isRising) {
             setIsLoading(false);
         } else setEnergyStatus("not green");
         
@@ -42,7 +61,7 @@ function GreenResultCard({ handleFetchData, setEnergyStatus }) {
            
             {/* <img className={styles.greenChartIcon} src={green_chart} /> */}
             
-                <DataVis />
+                <DataVis stats={chartStats} />
             
                 <div className={styles.greenPerc}>
                     <span className={styles.dot}></span> <p>{greenPercentage}% Green Power</p>

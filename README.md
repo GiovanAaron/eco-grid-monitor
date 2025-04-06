@@ -2,11 +2,11 @@
 
 ### 🚨 This web application is optomised to Chrome and Opera web browsers. There may be UI inconsistencies for Safari 🚨
 
-[eco-grid-monitor.netlify.app/](eco-grid-monitor.netlify.app/)
+eco-grid-monitor.netlify.app/
 
 or version 2:
 
-[eco-grid-monitor-v2.netlify.app/](eco-grid-monitor-v2.netlify.app/)
+eco-grid-monitor-v2.netlify.app/
 
 
 #### Description

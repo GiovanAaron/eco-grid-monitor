@@ -2,7 +2,12 @@
 
 ### 🚨 This web application is optomised to Chrome and Opera web browsers. There may be UI inconsistencies for Safari 🚨
 
-[https://giovanaaron.github.io/eco-grid-monitor/](https://eco-grid-monitor.netlify.app/)
+[eco-grid-monitor.netlify.app/](eco-grid-monitor.netlify.app/)
+
+or version 2:
+
+[eco-grid-monitor-v2.netlify.app/](eco-grid-monitor-v2.netlify.app/)
+
 
 #### Description
 The Green Grid app is a single-page React application that displays the environmental impact of the electricity grid in Great Britain. Using real-time data from the Elexon API, the app shows the amount of power generated from various fuel sources, categorizing them as "green" or "not green." The component also encourages users to reduce energy consumption when fossil fuel usage is high, promoting sustainable energy usage.

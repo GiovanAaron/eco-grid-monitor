@@ -2,11 +2,9 @@
 
 ### 🚨 This web application is optomised to Chrome and Opera web browsers. There may be UI inconsistencies for Safari 🚨
 
-eco-grid-monitor.netlify.app/
-
-or version 2:
-
-eco-grid-monitor-v2.netlify.app/
+- <a href="https://eco-grid-monitor.netlify.app/" target="_blank" rel="noopener noreferrer">Version 1 🔗 eco-grid-monitor.netlify.app</a>
+  
+- <a href="https://eco-grid-monitor-v2.netlify.app/" target="_blank" rel="noopener noreferrer">Version 2 🔗 eco-grid-monitor-v2.netlify.app</a>
 
 
 #### Description

@@ -40,3 +40,9 @@
 .read-the-docs {
   color: #888;
 }
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  .box {
+    transform: translateZ(0); /* Safari fix */
+  }
+}

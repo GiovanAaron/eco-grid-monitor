@@ -37,12 +37,16 @@ body {
   min-width: 320px;
   min-height: 100vh; */
   margin: 0;
-  display: flex;
+  /* display: flex; */
   align-items: center;
   justify-content: center;
-  min-width: 320px;
-  min-height: 100vh;
+  /* min-width: 320px;
+  min-height: 100vh; */
   line-height: 1.5;
+
+  min-height: auto;
+  min-width: auto;
+ 
 }
 
 h1 {

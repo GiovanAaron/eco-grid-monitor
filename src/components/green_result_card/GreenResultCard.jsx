@@ -38,10 +38,11 @@ function GreenResultCard({ handleFetchData, setEnergyStatus }) {
 
     return (
         <div className={styles.container}>
-            <img className={styles.greenChartIcon} src={green_chart} />
+            <img className={styles.rendescoGridLogoIcon} src={rendesco_grid_logo} />
                 <div className={styles.greenPerc}>
                     <span className={styles.dot}></span> <p>{greenPercentage}% Green Power</p>
                 </div>
+            <img className={styles.greenChartIcon} src={green_chart} />
             <div className={styles.resulttext}>
                 <p className={styles.goodNews}>Good news!</p>
                 <p className={styles.fossilFuelConsumptionIsDow}>
@@ -50,11 +51,11 @@ function GreenResultCard({ handleFetchData, setEnergyStatus }) {
                     <span className={styles.fromYesterdayAt}> from yesterday at this hour</span>
                 </p>
             </div>
-            <i className={styles.disclaimertext}>Disclaimer: Energy data is reported with an approximate 90-minute delay.</i>
+           
             <button className={styles.greenbtn}>
                 <div className={styles.checkAgain} onClick={fetchData}>Check Again</div>
             </button>
-            <img className={styles.rendescoGridLogoIcon} src={rendesco_grid_logo} />
+             <i className={styles.disclaimertext}>Disclaimer: Energy data is reported with an approximate 90-minute delay.</i>
             <div className={styles.overlay} />
         </div>
     );

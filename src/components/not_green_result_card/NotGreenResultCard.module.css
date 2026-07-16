@@ -21,7 +21,7 @@
     min-width: auto;
     /* max-height: 46.188rem ; */
     /* margin: 10rem; */
-
+    max-width: 150%;
 
   
 }
@@ -45,6 +45,7 @@
     flex-direction: row;
     align-items: center;
     margin-bottom: 1.5rem;
+    gap: .5rem;
    
 
 }

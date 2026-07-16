@@ -1,90 +1,13 @@
-.greenChartIcon {
-    position: relative;
-    top: 14.188rem;
-}
-
-.goodNews {
-    margin-block-start: 0;
-    margin-block-end: 5px;
-}
-
-.span {
-    color: #fff86d;
-}
-
-.fromYesterdayAt {
-    color: #fff;
-}
-
-.fossilFuelConsumptionIsDow {
-    margin: 0;
-}
-
-.resulttext {
-    position: relative;
-    top: 35%;
-    font-weight: 500;
-}
-
-.disclaimertext {
-    position: relative;
-    top: 27rem; /* Updated from percentage to rem for consistency */
-    font-size: 0.688rem;
-}
-
-.checkAgain {
-    position: relative;
-    font-weight: 500;
-}
-
-.greenbtn {
-    justify-self: center;
-    position: relative;
-    top: 40%;
-    width: 20%;
-    background-color: rgba(2, 183, 130, 0.61);
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    padding: 0.625rem;
-    color: #e8e8e8;
-    margin: auto; /* Ensures proper centering */
-}
-
-.rendescoGridLogoIcon {
-    position: relative;
-    top: -18rem; /* Updated from percentage to rem for consistency */
-}
-
-.greenPerc {
-    top: 19%;
-    left: 50%;
-    transform: translateX(-50%);
-    justify-self: center;
-    justify-content: center;
-    position: absolute;
-    display: flex;
-    flex-direction: row;
-    min-width: 30rem;
-    align-items: center;
-    gap: 0.5rem;
-}
-
-.dot {
-    height: 0.5rem;
-    width: 0.5rem;
-    background-color: #02B782;
-    border-radius: 50%;
-}
-
 .container {
-    width: 36.625rem;
-    height: 100vh; /* Adjusted for consistency across browsers */
-    min-height: 46.188rem;
-    max-height: 46.188rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    width: auto;
+    height: auto;
     position: relative;
-    background: linear-gradient(rgba(213, 92, 92, 0.2), rgba(213, 92, 92, 0.2)), #171927;
+    background: linear-gradient(180.61deg, rgba(0, 0, 0, 0), rgba(68, 3, 3, 0.2) 48.56%, rgba(255, 255, 255, 0)), linear-gradient(180.47deg, rgba(0, 0, 0, 0), rgba(68, 3, 3, 0.2) 58.05%, rgba(255, 255, 255, 0)), linear-gradient(179.73deg, rgba(0, 0, 0, 0), rgba(68, 3, 3, 0.2) 48.56%, rgba(255, 255, 255, 0)), linear-gradient(171.79deg, rgba(196, 93, 29, 0), rgba(196, 93, 29, 0.5)), #171927;
     box-shadow: 0px 15px 19.5px rgba(0, 0, 0, 0.25);
     border-radius: 23px;
     overflow: hidden;
@@ -92,12 +15,131 @@
     font-size: 0.938rem;
     color: #fff;
     font-family: Inter;
-    transform: scale(0.8);
+    transform: scale(0.8); /* Scale everything inside the container */
+    /* transform-origin: center center; */
+    min-height: auto ;
+    min-width: auto;
+    /* max-height: 46.188rem ; */
+    /* margin: 10rem; */
+
+    
+
+
+  
 }
 
+.rendescoGridLogoIcon {
+   
+    align-items: center;
+    justify-content: center;
+    justify-self: center;
+    margin-top: 2em;
+
+}
+
+.greenPerc{
+    
+    /* right: 50%; */
+    /* transform: translateX(-50%); */
+    justify-self: center;
+    justify-content: center;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    gap: .5rem;
+   
+
+}
+
+.greenChartIcon {
+    padding-left: 5rem;
+    padding-right: 5rem;
+   
+    
+    
+}
+
+.resulttext {
+    margin-top: 2.5rem;
+    font-weight: 500;
+    /* margin: 0, 10rem, 0, 10rem; */
+
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+
+.advisory {
+    margin: 1rem;
+    font-weight: 500;
+}
+.goodNews {
+    margin-block-start: 0;
+    margin-block-end: 5px;
+}
+.span {
+    color: #fff86d;
+}
+.fromYesterdayAt {
+    color: #fff;
+}
+.fossilFuelConsumptionIsDow {
+    margin: 0;
+}
+
+.greenbtn {
+    justify-self: center;
+    
+    
+    width: auto;;
+    background-color: rgba(2, 183, 130, 0.61);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 0.625rem;
+    color: #e8e8e8;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    
+    
+}
+
+.disclaimertext {
+    
+    
+    margin-top: 4.5rem;
+    font-size: 0.688rem;
+    margin-bottom: 2rem;
+    
+}
+.checkAgain {
+    
+    font-weight: 500;
+    
+}
+
+
+
+.dot {
+
+    
+        height: 0.5rem;
+        width: 0.5rem;
+        background-color: #b78702;
+        border-radius: 50%;
+        
+      
+}
+
+
+
+
 button {
+
     border-radius: 0%;
 }
+
 
 @keyframes fadeOut {
     0% {
@@ -124,8 +166,12 @@ button {
     background: linear-gradient(rgba(213, 92, 92, 0.2), rgba(213, 92, 92, 0.2)), #171927;
     width: 100%;
     height: 130%;
-    top: -25%; /* Adjusted from -65% to improve layout */
+    top: -25%;
     overflow: hidden;
-    opacity: 1;
-    animation: fadeOut 1s forwards;
+     /* Make sure it's visible */
+    opacity: 1; /* Start off isible */
+    animation: fadeOut 1s forwards; /* Fade in on initial render */
+    
+    
 }
+

@@ -26,7 +26,7 @@ function App() {
   
 
     return (
-        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', padding: '1rem' , marginTop: '-3rem' }}>
+        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', padding: '1rem' , marginTop: '-5rem' }}>
             {energyStatus === "green" ? (
                 <GreenResultCard 
                    

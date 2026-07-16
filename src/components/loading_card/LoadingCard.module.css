@@ -1,100 +1,94 @@
 .container {
-    
-   display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
-    width: auto;
-    height: auto;
-    position: relative;
+  width: auto;
+  height: auto;
+  position: relative;
+  min-height: auto;
 
-    box-sizing: border-box;
-    background: linear-gradient(rgba(213, 92, 92, 0.2), rgba(213, 92, 92, 0.2)), #171927;
-    /* overflow: hidden; */
-    /* cursor: pointer; */
-    text-align: center;
-    font-size: 0.938rem;
-    color: #d9d9d9;
-    font-family: inter;
-    transform: scale(0.8); /* Scale everything inside the container */
-    transform-origin: center center; /* Ensures it scales from the center */
-    box-shadow: 0px 15px 19.5px rgba(0, 0, 0, 0.25);
-    border-radius: 2rem;
-    gap:12rem;
-    min-height: auto ;
-    min-width: auto;
-    
-    
+  box-sizing: border-box;
+  background:
+    linear-gradient(rgba(213, 92, 92, 0.2), rgba(213, 92, 92, 0.2)), #171927;
+  /* overflow: hidden; */
+  /* cursor: pointer; */
+  text-align: center;
+  font-size: 0.938rem;
+  color: #d9d9d9;
+  font-family: inter;
+  transform: scale(0.8); /* Scale everything inside the container */
+  transform-origin: center center; /* Ensures it scales from the center */
+  box-shadow: 0px 15px 19.5px rgba(0, 0, 0, 0.25);
+  border-radius: 2rem;
+  gap: 12rem;
+
+  max-width: 130%;
+  /* min-width: 90%; */
 }
 .rendescoGridLogoIcon {
-    
-   margin-top: 2rem;
-   padding-left: 10rem;
-   padding-right: 10rem;
-    
+  margin-top: 2rem;
+  padding-left: 10rem;
+  padding-right: 10rem;
 }
 .loadingFrame {
-    
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    gap: .5rem;
-    /* background-color: orange; */
-    padding-bottom:7rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.5rem;
+  /* background-color: orange; */
+  padding-bottom: 7rem;
+  padding-top: 2rem;
+  margin-bottom: 13rem;
 }
 .rendescoLoaderIcon {
-    width: 2.813rem;
-  
+  width: 2.813rem;
 
-    /* object-fit: cover; */
-   
+  /* object-fit: cover; */
 }
 .loading {
-    align-self: stretch;
-   
-    font-weight: 500;
-    display: inline-block;
-    height: 1.813rem;
-    flex-shrink: 0;
+  align-self: stretch;
+
+  font-weight: 500;
+  /* display: inline-block; */
+  height: 1.813rem;
+  flex-shrink: 0;
 }
 
-
-
-
-
-
 @keyframes fadeOut {
-    0% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-    }
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 @keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .overlay {
-   
-    background: linear-gradient(rgba(213, 92, 92, 0.2), rgba(213, 92, 92, 0.2)), #171927;
-    
-   
-    overflow: hidden;
-   
-    opacity: 0; /* Start off invisible */
-    animation: fadeIn 1s backwards; /* Fade in on initial render */
-    background-color: green
+  background: linear-gradient(rgba(213, 92, 92, 0.2), rgba(213, 92, 92, 0.2)), #171927;
+  /* background: yellow; */
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  /* overflow: hidden; */
+  /* top: -15rem; */
+  opacity: 0;
+  animation: fadeIn 2s backwards; 
+  z-index: 9999; /* Push to top layer */
+  /* background-color: green */
 }
 
 .overlay.fadeOut {
-    animation: fadeOut 1s backwards; /* Fade out when leaving */
+  animation: fadeOut 2s backwards; /* Fade out when leaving */
 }
